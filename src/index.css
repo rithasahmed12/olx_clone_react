@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sell-button {
+  border: solid 5px;
+  border-color: rgb(0, 217, 255) rgb(255, 204, 0) rgb(3, 142, 255);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
