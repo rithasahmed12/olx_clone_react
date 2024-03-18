@@ -47,7 +47,7 @@ const Signup = () => {
           displayName: userName,
         })
          
-            const usersCollectionRef = collection(db, "Users");
+            const usersCollectionRef =  collection(db, "Users");
             await addDoc(usersCollectionRef, { userName: userName, uid: user.uid,phone:phone })
               //now we are updated the username
               console.log('created user', user);
@@ -58,7 +58,7 @@ const Signup = () => {
       }catch(error){
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        console.log('lalala:',errorCode, errorMessage);
         // ..
       }
 
@@ -71,7 +71,7 @@ const Signup = () => {
     <div className='bg-gray-100 grid grid-cols-12 h-screen pb-5'>
 
       <span className='col-span-4'></span>
-      <div className='col-span-4 m-10 bg-white h-3/4 my-auto rounded-xl'>
+      <div className='col-span-4 m-10 bg-white h-3/3 my-auto rounded-xl'>
 
       <Link to={'/'}> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="m-7 w-7 h-7 cursor-pointer">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
@@ -86,9 +86,9 @@ const Signup = () => {
           <input ref={emailRef} onChange={(e)=>setEmail(e.target.value)} className='py-2 px-2 border-2 w-3/4 rounded-lg mt-5 border-black' type="text" placeholder='Email' />
           <input ref={passwordRef} onChange={(e)=>setPassword(e.target.value)} className='py-2 px-2 border-2 w-3/4 rounded-lg mt-5 border-black' type="password" placeholder='Password' />
 
-          <button onClick={(e)=>handleCreate(e)} className='w-3/4 bg-black text-white font-bold text-center text-lg rounded-md py-3 mt-10'>Create</button>
+          <button onClick={(e)=>handleCreate(e)} className='w-3/4 bg-black text-white font-bold text-center text-lg rounded-md py-3 mt-6'>Create</button>
 
-          <Link to={'/login'}><p className='underline my-10'>Login with Account</p></Link>
+          <Link to={'/login'}><p className='underline my-5'>Login with Account</p></Link>
 
         </div>
 

@@ -50,7 +50,7 @@ const Login = () => {
     <div className='bg-gray-100 h-screen grid grid-cols-12 pb-5'>
       
       <span className='col-span-4'></span>
-      <div className='col-span-4 m-10 bg-white my-auto rounded-xl h-3/4'>
+      <div className='col-span-4 m-10 bg-white my-auto rounded-xl h-3/3'>
 
         <Link to={'/'}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="m-7 w-7 h-7 cursor-pointer">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
